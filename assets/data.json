@@ -1,0 +1,22 @@
+[
+  {
+    "mood": "Stressed",
+    "scale": 5.0
+  },
+  {
+    "mood": "Angry",
+    "scale": 8.0
+  },
+  {
+    "mood": "Sad",
+    "scale": 4.0
+  },
+  {
+    "mood": "Calm",
+    "scale": 2.0
+  },
+  {
+    "mood": "Happy",
+    "scale": 1.0
+  }
+]
