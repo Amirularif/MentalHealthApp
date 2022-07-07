@@ -47,18 +47,16 @@ class Result extends StatelessWidget {
 
           SizedBox(height: 10),
 
-          FlatButton(
+          TextButton(
             child: Text(
               'Restart Survey?',
             ), //Text
-            textColor: Colors.blue,
             onPressed: resetHandler,
           ),
-          FlatButton(
+          TextButton(
             child: Text(
               'Back to Dashboard?',
             ), //Text
-            textColor: Colors.blue,
             onPressed: () {
               Navigator.push(
                 context,

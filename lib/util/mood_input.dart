@@ -17,7 +17,7 @@ class MoodInput {
           title: Text(title),
           content: Text(body),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               onPressed: () =>
                   Navigator.of(context).pop(DialogsAction.cancel),
               child: Text(
@@ -26,7 +26,7 @@ class MoodInput {
                     color: Colors.black87, fontWeight: FontWeight.bold),
               ),
             ),
-            FlatButton(
+            TextButton(
               onPressed: () => Navigator.of(context).pop(DialogsAction.yes),
               child: Text(
                 '저장',

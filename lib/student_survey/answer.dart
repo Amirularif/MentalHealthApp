@@ -10,23 +10,16 @@ class Answer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      child: FlatButton(
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            primary: Colors.white70, onPrimary: Colors.black87
+        ),
         onPressed: selectHandler,
         child: Text(answerText,
             style: TextStyle(
-                fontWeight: FontWeight.bold,
                 color: Colors.black87
             )
         ),
-        textColor: Colors.black87,
-        shape: RoundedRectangleBorder(
-            side: BorderSide(
-                color: Colors.blue.shade100,
-                width: 1,
-                style: BorderStyle.solid),
-            borderRadius: BorderRadius.circular(12)
-        ),
-        color: Colors.blue.shade100,
         /*color: Colors.indigo,
         textColor: Colors.white,
         child: Text(answerText),
