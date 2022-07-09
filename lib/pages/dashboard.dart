@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:mental_health_app/gad7_survey/surveymain.dart';
 import 'package:mental_health_app/graph/graph.dart';
@@ -107,6 +108,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Happy', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').doc('Emotion').
+                        update({'Mood':'Happy'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -133,6 +137,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Sad', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Sad'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -160,6 +167,9 @@ class _DashboardState extends State<Dashboard> {
                       final action = await MoodInput.yesCancelDialog(context, 'Tired', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
                         setState(() => tappedYes = true);
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Tired'});
                       } else {
                         setState(() => tappedYes = false);
                       }
@@ -185,6 +195,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Worried', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Worried'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -211,6 +224,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Excited', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Excited'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -247,6 +263,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Calm', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Calm'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -273,6 +292,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Bored', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Bored'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -299,6 +321,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Annoyed', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Annoyed'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -325,6 +350,9 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Angry', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').
+                        add({'Mood':'Angry'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);
@@ -351,6 +379,8 @@ class _DashboardState extends State<Dashboard> {
                     onTap: ()async {
                       final action = await MoodInput.yesCancelDialog(context, 'Stressed', '저장하시겠습니까 ?');
                       if(action == DialogsAction.yes) {
+                        FirebaseFirestore.instance.
+                        collection('Feeling').add({'Mood':'Stressed'});
                         setState(() => tappedYes = true);
                       } else {
                         setState(() => tappedYes = false);

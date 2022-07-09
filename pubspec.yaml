@@ -37,6 +37,8 @@ dependencies:
   google_fonts: ^3.0.1
   syncfusion_flutter_charts: ^20.1.61
   animated_theme_switcher: ^2.0.6
+  firebase_core: ^1.19.1
+  cloud_firestore: ^3.2.1
 
 dev_dependencies:
   flutter_test:
